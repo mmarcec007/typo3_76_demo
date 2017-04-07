@@ -2,19 +2,19 @@
 
 .t3-icon-tx_inventory_domain_model_category-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/inventory/Resources/Public/Icons/tx_inventory_domain_model_category.gif') !important;
+	background-image: url('../../typo3/typo3conf/ext/inventory/Resources/Public/Icons/tx_inventory_domain_model_category.gif') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_inventory_domain_model_product-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/inventory/Resources/Public/Icons/tx_inventory_domain_model_product.gif') !important;
+	background-image: url('../../typo3/typo3conf/ext/inventory/Resources/Public/Icons/tx_inventory_domain_model_product.gif') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_simpleblog_domain_model_blog-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/simple_blog/Resources/Public/Icons/tx_simpleblog_domain_model_blog.gif') !important;
+	background-image: url('../../typo3/typo3conf/ext/simple_blog/Resources/Public/Icons/tx_simpleblog_domain_model_blog.gif') !important;
 	background-size: contain;
 }
 	

@@ -1263,6 +1263,6 @@ array (
       'ext_icon' => 'ext_icon.png',
     ),
   ),
-  'packageObjectsCacheEntryIdentifier' => 'PackageObjects_58e77985e8fd4730889923',
+  'packageObjectsCacheEntryIdentifier' => 'PackageObjects_58e7894bd7abd278880920',
 );
 #

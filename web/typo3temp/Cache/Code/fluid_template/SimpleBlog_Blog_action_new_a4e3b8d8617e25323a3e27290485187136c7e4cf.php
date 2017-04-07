@@ -1,5 +1,5 @@
 <?php
-class FluidCache_SimpleBlog_Blog_action_show_9b416170f4a3a6e97e36036b6fdb5246dd81065e extends \TYPO3\CMS\Fluid\Core\Compiler\AbstractCompiledTemplate {
+class FluidCache_SimpleBlog_Blog_action_new_a4e3b8d8617e25323a3e27290485187136c7e4cf extends \TYPO3\CMS\Fluid\Core\Compiler\AbstractCompiledTemplate {
 
 public function getVariableContainer() {
 	// @todo
@@ -25,9 +25,9 @@ $currentVariableContainer = $renderingContext->getTemplateVariableContainer();
 $output0 = '';
 
 $output0 .= '
-<h1>Single View for Blog</h1>
+    <h1>New Blog</h1>
 
-';
+    ';
 // Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\FlashMessagesViewHelper
 $arguments1 = array();
 $arguments1['additionalAttributes'] = NULL;
@@ -54,13 +54,14 @@ $viewHelper3->setRenderChildrenClosure($renderChildrenClosure2);
 $output0 .= $viewHelper3->initializeArgumentsAndRender();
 
 $output0 .= '
-';
+
+    ';
 // Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper
 $arguments4 = array();
-$arguments4['partial'] = 'Blog/Properties';
+$arguments4['partial'] = 'FormErrors';
 // Rendering Array
 $array5 = array();
-$array5['blog'] = $currentVariableContainer->getOrNull('blog');
+$array5['object'] = $currentVariableContainer->getOrNull('Blog');
 $arguments4['arguments'] = $array5;
 $arguments4['section'] = NULL;
 $arguments4['optional'] = false;
@@ -69,10 +70,21 @@ $renderChildrenClosure6 = function() {return NULL;};
 $output0 .= TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper::renderStatic($arguments4, $renderChildrenClosure6, $renderingContext);
 
 $output0 .= '
-';
-// Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+        <div class="container">
+            <section id="contact">
+                    <div class="section-content">
+                        <h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+                        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+                    </div>
+                    <div class="contact-section">
+                        <div class="container">
+                            ';
+// Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
 $arguments7 = array();
-$arguments7['action'] = 'list';
+$arguments7['action'] = 'create';
+$arguments7['enctype'] = 'multipart/form-data';
+$arguments7['name'] = 'newBlog';
+$arguments7['object'] = $currentVariableContainer->getOrNull('newBlog');
 $arguments7['additionalAttributes'] = NULL;
 $arguments7['data'] = NULL;
 $arguments7['arguments'] = array (
@@ -86,14 +98,20 @@ $arguments7['noCache'] = false;
 $arguments7['noCacheHash'] = false;
 $arguments7['section'] = '';
 $arguments7['format'] = '';
-$arguments7['linkAccessRestrictedPages'] = false;
 $arguments7['additionalParams'] = array (
 );
 $arguments7['absolute'] = false;
 $arguments7['addQueryString'] = false;
 $arguments7['argumentsToBeExcludedFromQueryString'] = array (
 );
-$arguments7['addQueryStringMethod'] = NULL;
+$arguments7['fieldNamePrefix'] = NULL;
+$arguments7['actionUri'] = NULL;
+$arguments7['objectName'] = NULL;
+$arguments7['hiddenFieldClassName'] = NULL;
+$arguments7['addQueryStringMethod'] = '';
+$arguments7['method'] = NULL;
+$arguments7['onreset'] = NULL;
+$arguments7['onsubmit'] = NULL;
 $arguments7['class'] = NULL;
 $arguments7['dir'] = NULL;
 $arguments7['id'] = NULL;
@@ -103,75 +121,41 @@ $arguments7['title'] = NULL;
 $arguments7['accesskey'] = NULL;
 $arguments7['tabindex'] = NULL;
 $arguments7['onclick'] = NULL;
-$arguments7['name'] = NULL;
-$arguments7['rel'] = NULL;
-$arguments7['rev'] = NULL;
-$arguments7['target'] = NULL;
 $renderChildrenClosure8 = function() use ($renderingContext, $self) {
 $currentVariableContainer = $renderingContext->getTemplateVariableContainer();
-return 'Back to list';
-};
-$viewHelper9 = $self->getViewHelper('$viewHelper9', $renderingContext, 'TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper');
-$viewHelper9->setArguments($arguments7);
-$viewHelper9->setRenderingContext($renderingContext);
-$viewHelper9->setRenderChildrenClosure($renderChildrenClosure8);
-// End of ViewHelper TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+$output9 = '';
 
-$output0 .= $viewHelper9->initializeArgumentsAndRender();
-
-$output0 .= '<br />
-';
-// Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+$output9 .= '
+                                ';
+// Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper
 $arguments10 = array();
-$arguments10['action'] = 'new';
-$arguments10['additionalAttributes'] = NULL;
-$arguments10['data'] = NULL;
+$arguments10['partial'] = 'Blog/FormFields';
+$arguments10['section'] = NULL;
 $arguments10['arguments'] = array (
 );
-$arguments10['controller'] = NULL;
-$arguments10['extensionName'] = NULL;
-$arguments10['pluginName'] = NULL;
-$arguments10['pageUid'] = NULL;
-$arguments10['pageType'] = 0;
-$arguments10['noCache'] = false;
-$arguments10['noCacheHash'] = false;
-$arguments10['section'] = '';
-$arguments10['format'] = '';
-$arguments10['linkAccessRestrictedPages'] = false;
-$arguments10['additionalParams'] = array (
-);
-$arguments10['absolute'] = false;
-$arguments10['addQueryString'] = false;
-$arguments10['argumentsToBeExcludedFromQueryString'] = array (
-);
-$arguments10['addQueryStringMethod'] = NULL;
-$arguments10['class'] = NULL;
-$arguments10['dir'] = NULL;
-$arguments10['id'] = NULL;
-$arguments10['lang'] = NULL;
-$arguments10['style'] = NULL;
-$arguments10['title'] = NULL;
-$arguments10['accesskey'] = NULL;
-$arguments10['tabindex'] = NULL;
-$arguments10['onclick'] = NULL;
-$arguments10['name'] = NULL;
-$arguments10['rel'] = NULL;
-$arguments10['rev'] = NULL;
-$arguments10['target'] = NULL;
-$renderChildrenClosure11 = function() use ($renderingContext, $self) {
-$currentVariableContainer = $renderingContext->getTemplateVariableContainer();
-return 'New Blog';
+$arguments10['optional'] = false;
+$renderChildrenClosure11 = function() {return NULL;};
+
+$output9 .= TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper::renderStatic($arguments10, $renderChildrenClosure11, $renderingContext);
+
+$output9 .= '
+                            ';
+return $output9;
 };
-$viewHelper12 = $self->getViewHelper('$viewHelper12', $renderingContext, 'TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper');
-$viewHelper12->setArguments($arguments10);
+$viewHelper12 = $self->getViewHelper('$viewHelper12', $renderingContext, 'TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper');
+$viewHelper12->setArguments($arguments7);
 $viewHelper12->setRenderingContext($renderingContext);
-$viewHelper12->setRenderChildrenClosure($renderChildrenClosure11);
-// End of ViewHelper TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+$viewHelper12->setRenderChildrenClosure($renderChildrenClosure8);
+// End of ViewHelper TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
 
 $output0 .= $viewHelper12->initializeArgumentsAndRender();
 
 $output0 .= '
-';
+                        </div>
+                    </div>
+            </section>
+        </div>
+    ';
 
 
 return $output0;
@@ -186,7 +170,7 @@ $currentVariableContainer = $renderingContext->getTemplateVariableContainer();
 $output13 = '';
 
 $output13 .= '
-';
+    ';
 // Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\LayoutViewHelper
 $arguments14 = array();
 $arguments14['name'] = 'Default';
@@ -201,18 +185,18 @@ $output13 .= $viewHelper16->initializeArgumentsAndRender();
 
 $output13 .= '
 
-This Template is responsible for displaying a single view for a domain object
+    This template displays a NEW form for the current domain object.
 
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Show.html: keep
+    If you modify this template, do not forget to change the overwrite settings
+    in /Configuration/ExtensionBuilder/settings.yaml:
+      Resources:
+        Private:
+          Templates:
+            New.html: keep
 
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+    Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
-';
+    ';
 // Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\SectionViewHelper
 $arguments17 = array();
 $arguments17['name'] = 'main';
@@ -221,9 +205,9 @@ $currentVariableContainer = $renderingContext->getTemplateVariableContainer();
 $output19 = '';
 
 $output19 .= '
-<h1>Single View for Blog</h1>
+    <h1>New Blog</h1>
 
-';
+    ';
 // Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\FlashMessagesViewHelper
 $arguments20 = array();
 $arguments20['additionalAttributes'] = NULL;
@@ -250,13 +234,14 @@ $viewHelper22->setRenderChildrenClosure($renderChildrenClosure21);
 $output19 .= $viewHelper22->initializeArgumentsAndRender();
 
 $output19 .= '
-';
+
+    ';
 // Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper
 $arguments23 = array();
-$arguments23['partial'] = 'Blog/Properties';
+$arguments23['partial'] = 'FormErrors';
 // Rendering Array
 $array24 = array();
-$array24['blog'] = $currentVariableContainer->getOrNull('blog');
+$array24['object'] = $currentVariableContainer->getOrNull('Blog');
 $arguments23['arguments'] = $array24;
 $arguments23['section'] = NULL;
 $arguments23['optional'] = false;
@@ -265,10 +250,21 @@ $renderChildrenClosure25 = function() {return NULL;};
 $output19 .= TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper::renderStatic($arguments23, $renderChildrenClosure25, $renderingContext);
 
 $output19 .= '
-';
-// Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+        <div class="container">
+            <section id="contact">
+                    <div class="section-content">
+                        <h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+                        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+                    </div>
+                    <div class="contact-section">
+                        <div class="container">
+                            ';
+// Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
 $arguments26 = array();
-$arguments26['action'] = 'list';
+$arguments26['action'] = 'create';
+$arguments26['enctype'] = 'multipart/form-data';
+$arguments26['name'] = 'newBlog';
+$arguments26['object'] = $currentVariableContainer->getOrNull('newBlog');
 $arguments26['additionalAttributes'] = NULL;
 $arguments26['data'] = NULL;
 $arguments26['arguments'] = array (
@@ -282,14 +278,20 @@ $arguments26['noCache'] = false;
 $arguments26['noCacheHash'] = false;
 $arguments26['section'] = '';
 $arguments26['format'] = '';
-$arguments26['linkAccessRestrictedPages'] = false;
 $arguments26['additionalParams'] = array (
 );
 $arguments26['absolute'] = false;
 $arguments26['addQueryString'] = false;
 $arguments26['argumentsToBeExcludedFromQueryString'] = array (
 );
-$arguments26['addQueryStringMethod'] = NULL;
+$arguments26['fieldNamePrefix'] = NULL;
+$arguments26['actionUri'] = NULL;
+$arguments26['objectName'] = NULL;
+$arguments26['hiddenFieldClassName'] = NULL;
+$arguments26['addQueryStringMethod'] = '';
+$arguments26['method'] = NULL;
+$arguments26['onreset'] = NULL;
+$arguments26['onsubmit'] = NULL;
 $arguments26['class'] = NULL;
 $arguments26['dir'] = NULL;
 $arguments26['id'] = NULL;
@@ -299,75 +301,41 @@ $arguments26['title'] = NULL;
 $arguments26['accesskey'] = NULL;
 $arguments26['tabindex'] = NULL;
 $arguments26['onclick'] = NULL;
-$arguments26['name'] = NULL;
-$arguments26['rel'] = NULL;
-$arguments26['rev'] = NULL;
-$arguments26['target'] = NULL;
 $renderChildrenClosure27 = function() use ($renderingContext, $self) {
 $currentVariableContainer = $renderingContext->getTemplateVariableContainer();
-return 'Back to list';
-};
-$viewHelper28 = $self->getViewHelper('$viewHelper28', $renderingContext, 'TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper');
-$viewHelper28->setArguments($arguments26);
-$viewHelper28->setRenderingContext($renderingContext);
-$viewHelper28->setRenderChildrenClosure($renderChildrenClosure27);
-// End of ViewHelper TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+$output28 = '';
 
-$output19 .= $viewHelper28->initializeArgumentsAndRender();
-
-$output19 .= '<br />
-';
-// Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+$output28 .= '
+                                ';
+// Rendering ViewHelper TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper
 $arguments29 = array();
-$arguments29['action'] = 'new';
-$arguments29['additionalAttributes'] = NULL;
-$arguments29['data'] = NULL;
+$arguments29['partial'] = 'Blog/FormFields';
+$arguments29['section'] = NULL;
 $arguments29['arguments'] = array (
 );
-$arguments29['controller'] = NULL;
-$arguments29['extensionName'] = NULL;
-$arguments29['pluginName'] = NULL;
-$arguments29['pageUid'] = NULL;
-$arguments29['pageType'] = 0;
-$arguments29['noCache'] = false;
-$arguments29['noCacheHash'] = false;
-$arguments29['section'] = '';
-$arguments29['format'] = '';
-$arguments29['linkAccessRestrictedPages'] = false;
-$arguments29['additionalParams'] = array (
-);
-$arguments29['absolute'] = false;
-$arguments29['addQueryString'] = false;
-$arguments29['argumentsToBeExcludedFromQueryString'] = array (
-);
-$arguments29['addQueryStringMethod'] = NULL;
-$arguments29['class'] = NULL;
-$arguments29['dir'] = NULL;
-$arguments29['id'] = NULL;
-$arguments29['lang'] = NULL;
-$arguments29['style'] = NULL;
-$arguments29['title'] = NULL;
-$arguments29['accesskey'] = NULL;
-$arguments29['tabindex'] = NULL;
-$arguments29['onclick'] = NULL;
-$arguments29['name'] = NULL;
-$arguments29['rel'] = NULL;
-$arguments29['rev'] = NULL;
-$arguments29['target'] = NULL;
-$renderChildrenClosure30 = function() use ($renderingContext, $self) {
-$currentVariableContainer = $renderingContext->getTemplateVariableContainer();
-return 'New Blog';
+$arguments29['optional'] = false;
+$renderChildrenClosure30 = function() {return NULL;};
+
+$output28 .= TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper::renderStatic($arguments29, $renderChildrenClosure30, $renderingContext);
+
+$output28 .= '
+                            ';
+return $output28;
 };
-$viewHelper31 = $self->getViewHelper('$viewHelper31', $renderingContext, 'TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper');
-$viewHelper31->setArguments($arguments29);
+$viewHelper31 = $self->getViewHelper('$viewHelper31', $renderingContext, 'TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper');
+$viewHelper31->setArguments($arguments26);
 $viewHelper31->setRenderingContext($renderingContext);
-$viewHelper31->setRenderChildrenClosure($renderChildrenClosure30);
-// End of ViewHelper TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+$viewHelper31->setRenderChildrenClosure($renderChildrenClosure27);
+// End of ViewHelper TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
 
 $output19 .= $viewHelper31->initializeArgumentsAndRender();
 
 $output19 .= '
-';
+                        </div>
+                    </div>
+            </section>
+        </div>
+    ';
 return $output19;
 };
 
@@ -382,4 +350,4 @@ return $output13;
 
 
 }
-#1491568549    13041     
+#1491572571    12204     

@@ -1,22 +1,31 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<label for="title">
-	<f:translate key="tx_simpleblog_domain_model_blog.title" /> <span class="required">(required)</span>
-</label><br />
-	<f:form.textfield property="title" /><br />
-<label for="date">
-	<f:translate key="tx_simpleblog_domain_model_blog.date" />
-</label><br />
-	<f:form.textfield property="date" value="{blog.date->f:format.date()}" /><br />
-<label for="teaser">
-	<f:translate key="tx_simpleblog_domain_model_blog.teaser" />
-</label><br />
-	<f:form.textfield property="teaser" /><br />
-<label for="message">
-	<f:translate key="tx_simpleblog_domain_model_blog.message" /> <span class="required">(required)</span>
-</label><br />
-	<f:form.textarea property="message" cols="40" rows="15" /><br />
-<label for="image">
-	<f:translate key="tx_simpleblog_domain_model_blog.image" />
-</label><br />
-	<span>File upload is not implemented!</span><br  /><br />
+	<div class="col-md-6 form-line">
+		<div class="form-group">
+			<label for="title">
+				<f:translate key="tx_simpleblog_domain_model_blog.title" /> <span class="required">(required)</span>
+			</label>
+			<f:form.textfield property="title" class="form-control" id="" placeholder=" Enter Title"/>
+		</div>
+		<div class="form-group">
+			<label for="teaser">
+				<f:translate key="tx_simpleblog_domain_model_blog.teaser" />
+			</label><br />
+			<f:form.textfield property="teaser" class="form-control" id="exampleInputEmail" placeholder=" Enter Teaser"/>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="form-group">
+			<label for="message">
+				<f:translate key="tx_simpleblog_domain_model_blog.message" /> <span class="required">(required)</span>
+			</label>
+			<f:form.textarea property="teaser" class="form-control" id="description" placeholder="Enter Your Message"/>
+		</div>
+
+		<div>
+			<f:form.submit value="Create new" class="btn btn-default" />
+		</div>
+	</div>
 </html>
+
+

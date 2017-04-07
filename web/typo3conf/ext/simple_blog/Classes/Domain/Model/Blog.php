@@ -101,6 +101,10 @@ class Blog extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setDate(\DateTime $date)
     {
         $this->date = $date;
+        
+        if (empty($this->date) == true) {
+	        $this->date = new \DateTime();
+        }
     }
 
     /**
