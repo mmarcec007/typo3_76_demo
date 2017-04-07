@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-04-07T11:21:46Z" product-name="simple_blog">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-04-07T14:07:39Z" product-name="simple_blog">
 		<header/>
 		<body>
 			<trans-unit id="tx_simple_blog_domain_model_list">
@@ -26,6 +26,9 @@
 			</trans-unit>
 			<trans-unit id="tx_simpleblog_domain_model_blog.image">
 				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_simpleblog_domain_model_blog.dummyimageurl">
+				<source>Dummyimageurl</source>
 			</trans-unit>
 		</body>
 	</file>

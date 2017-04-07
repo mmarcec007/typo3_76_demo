@@ -1,5 +1,5 @@
 <?php
-class FluidCache_SimpleBlog_Blog_layout_Default_837ea4edd6df38e7b2977082be2672ef4b9b94aa extends \TYPO3\CMS\Fluid\Core\Compiler\AbstractCompiledTemplate {
+class FluidCache_SimpleBlog_Blog_layout_Default_042e76e29c829eeb2f3489e0d5fabbe148bc1162 extends \TYPO3\CMS\Fluid\Core\Compiler\AbstractCompiledTemplate {
 
 public function getVariableContainer() {
 	// @todo
@@ -47,4 +47,4 @@ return $output0;
 
 
 }
-#1491572571    1307      
+#1491579169    1307      

@@ -23,9 +23,18 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<article>
 				<div class="row">
 					<div class="col-sm-6 col-md-4">
-						<figure>
-							<f:image src="{blog.image.originalResource.publicUrl}" width="200"/>
-						</figure>
+						<f:if condition="{blog.image}">
+							<f:then>
+								<figure>
+									<f:image src="{blog.image.originalResource.publicUrl}" width="200"/>
+								</figure>
+							</f:then>
+							<f:else>
+								<figure>
+									<img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="{blog.dummyimageurl}">
+								</figure>
+							</f:else>
+						</f:if>
 					</div>
 					<div class="col-sm-6 col-md-8">
 						<span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>

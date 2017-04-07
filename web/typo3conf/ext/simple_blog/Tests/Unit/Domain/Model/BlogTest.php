@@ -160,4 +160,31 @@ class BlogTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         );
 
     }
+
+    /**
+     * @test
+     */
+    public function getDummyimageurlReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getDummyimageurl()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setDummyimageurlForStringSetsDummyimageurl()
+    {
+        $this->subject->setDummyimageurl('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'dummyimageurl',
+            $this->subject
+        );
+
+    }
 }

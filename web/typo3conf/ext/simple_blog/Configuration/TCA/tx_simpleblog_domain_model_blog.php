@@ -17,14 +17,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-		'searchFields' => 'title,date,teaser,message,image',
+		'searchFields' => 'title,date,teaser,message,image,dummyimageurl',
         'iconfile' => 'EXT:simple_blog/Resources/Public/Icons/tx_simpleblog_domain_model_blog.gif'
     ],
     'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, date, teaser, message, image',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, date, teaser, message, image, dummyimageurl',
     ],
     'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, date, teaser, message, image, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, date, teaser, message, image, dummyimageurl, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
 		'sys_language_uid' => [
@@ -192,6 +192,16 @@ return [
 			    ],
 			    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
+	    ],
+	    'dummyimageurl' => [
+	        'exclude' => true,
+	        'label' => 'LLL:EXT:simple_blog/Resources/Private/Language/locallang_db.xlf:tx_simpleblog_domain_model_blog.dummyimageurl',
+	        'config' => [
+			    'type' => 'text',
+			    'cols' => 40,
+			    'rows' => 15,
+			    'eval' => 'trim'
+			]
 	    ],
     ],
 ];

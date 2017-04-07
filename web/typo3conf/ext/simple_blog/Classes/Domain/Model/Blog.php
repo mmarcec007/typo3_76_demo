@@ -56,9 +56,17 @@ class Blog extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $image = null;
 
+    /**
+     * dummyimageurl
+     *
+     * @var string
+     */
+    protected $dummyimageurl = '';
+
     public function __construct()
     {
         $this->date = new \DateTime();
+        $this->dummyimageurl = "https://dummyimage.com/200x200/000/fff";
     }
 
     /**
@@ -101,9 +109,8 @@ class Blog extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setDate(\DateTime $date)
     {
         $this->date = $date;
-        
         if (empty($this->date) == true) {
-	        $this->date = new \DateTime();
+            $this->date = new \DateTime();
         }
     }
 
@@ -168,5 +175,26 @@ class Blog extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
     {
         $this->image = $image;
+    }
+
+    /**
+     * Returns the dummyimageurl
+     *
+     * @return string $dummyimageurl
+     */
+    public function getDummyimageurl()
+    {
+        return $this->dummyimageurl;
+    }
+
+    /**
+     * Sets the dummyimageurl
+     *
+     * @param string $dummyimageurl
+     * @return void
+     */
+    public function setDummyimageurl($dummyimageurl)
+    {
+        $this->dummyimageurl = $dummyimageurl;
     }
 }

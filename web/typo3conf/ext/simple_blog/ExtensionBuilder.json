@@ -82,6 +82,16 @@
                             "propertyName": "image",
                             "propertyType": "Image",
                             "uid": "1110282510198"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dummyimageurl",
+                            "propertyType": "Text",
+                            "uid": "1024526825824"
                         }
                     ]
                 },
@@ -133,7 +143,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2017-04-07 11:21",
+        "last_modified": "2017-04-07 02:07",
         "extension_builder_version": "7.6.18",
         "be_user": " (1)"
     }
