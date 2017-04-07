@@ -1,0 +1,26 @@
+{
+	"name": "reelworx/rx-shariff",
+	"description": "Shariff implementation for TYPO3 CMS including the backend module, a viewhelper and a plugin.",
+	"type": "typo3-cms-extension",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Reelworx GmbH",
+			"role": "Developer",
+			"homepage": "https://reelworx.at/"
+		}
+	],
+	"replace": {
+		"rx_shariff": "self.version",
+		"typo3-ter/rx-shariff": "self.version"
+	},
+	"require": {
+		"php": "5.6.0 - 7.1.99",
+		"typo3/cms-core": "6.2.9 - 8.7.99"
+	},
+	"autoload": {
+		"psr-4": {
+			"Reelworx\\RxShariff\\": "Classes/"
+		}
+	}
+}

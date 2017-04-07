@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-04-04T14:50:51Z" product-name="simple_blog">
+		<header/>
+		<body>
+			<trans-unit id="tx_simple_blog_domain_model_list">
+				<source>ListBlog</source>
+			</trans-unit>
+			<trans-unit id="tx_simple_blog_domain_model_list.description">
+				<source>This is a simple blog extension done with the extension builder.</source>
+			</trans-unit>
+			<trans-unit id="tx_simpleblog_domain_model_blog">
+				<source>Blog</source>
+			</trans-unit>
+			<trans-unit id="tx_simpleblog_domain_model_blog.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_simpleblog_domain_model_blog.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_simpleblog_domain_model_blog.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_simpleblog_domain_model_blog.message">
+				<source>Message</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

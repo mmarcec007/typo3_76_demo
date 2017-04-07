@@ -1,0 +1,14 @@
+{
+  "name": "twofour/simple-blog",
+  "type": "typo3-cms-extension",
+  "description": "\"Blogname\": blogging ",
+  "license": ["GPL-2.0+"],
+  "require": {
+    "typo3/cms": ">=7.6.0,<8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Twofour\\SimpleBlog\\": "Classes"
+    }
+  }
+}

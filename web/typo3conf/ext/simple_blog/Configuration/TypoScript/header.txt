@@ -1,0 +1,1 @@
+page.includeCSS.all = EXT:simple_blog/Resources/Public/Css/styles.css

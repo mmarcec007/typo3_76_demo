@@ -1,0 +1,107 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+}
+
+.background-image {
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position: center center;	
+	background-attachment: fixed;
+	height: 100vH;	
+}
+
+
+
+/* Navbar
+***********************
+*/
+.backend-layout-t3sbootstrap_10 .navbar .navbar-nav > li {
+	float: none;
+}
+
+
+/* Section hader & anchor
+***********************
+*/
+h1.section-header,
+h2.section-header {
+	font-size: 42px;
+	max-width:900px;
+	text-align:center;
+	margin:0 auto;
+	margin-top: 4rem;
+	margin-bottom: 6rem;	
+	letter-spacing: 1px;
+}
+h1.section-header small:before,
+h2.section-header small:before {
+	display: block;
+	content: '';
+	background: silver;
+	height: 1px;
+	margin-bottom: 10px;
+}
+h1.section-header small,
+h2.section-header small {
+	font-size: 16px;
+	display: block;
+}
+
+.anchor{
+  display: block;
+  height: 50px; /*same height as header*/
+  margin-top: -50px; /*same height as header*/
+  visibility: hidden;
+}
+
+
+/* Extra-kleine Geräte (Smartphones, weniger als 768px) */
+@media screen and (max-width: 767px){
+/*
+	.navbar-default .navbar-toggle .icon-bar {
+		 background-color: white;
+	}
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+		 background-color: #469da6;
+	}
+*/
+}
+
+/* Kleine Geräte (Tablets, 768px und breiter) */
+@media(min-width:768px) {
+
+	.backend-layout-t3sbootstrap_10 .navbar .navbar-nav > li > a {
+		 font-size: 18px;
+	}
+	
+	
+}
+
+/* Mittlere Geräte (Desktop-PCs, 992px und breiter) */
+@media (min-width: 992px) {
+	
+	.navbar .navbar-nav > li > a {
+		 font-size: 21px;
+	}	
+	
+}
+
+/* Große Geräte (Desktop-PCs, 1200px und breiter) */
+@media (min-width: 1200px) {
+	
+	.navbar .navbar-nav > li > a {
+		 font-size: 24px;
+	}	
+	
+}
+
+
+
+

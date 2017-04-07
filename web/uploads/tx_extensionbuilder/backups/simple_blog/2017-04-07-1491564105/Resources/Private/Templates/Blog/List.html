@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<h1>Listing for Gaming Blog</h1>
+
+	<f:flashMessages />
+
+	<div  class="tx_simpleblog" >
+		<f:for each="{blogs}" as="blog">
+			<article>
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<figure>
+							<f:image src="{blog.image.originalResource.publicUrl}" width="200"/>
+						</figure>
+					</div>
+					<div class="col-sm-6 col-md-8">
+						<span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
+						<h4>{blog.title}</h4>
+						<section>
+							<i class="glyphicon glyphicon-folder-open"></i>Bootstrap
+							<i class="glyphicon glyphicon-user"></i>{blog.teaser}
+							<i class="glyphicon glyphicon-calendar"></i>{blog.date -> f:format.date()}
+							<i class="glyphicon glyphicon-eye-open"></i>10000
+							<f:link.action class="btn btn-default btn-sm pull-right" action="show" arguments="{blog : blog}">More ... </f:link.action>
+						</section>
+					</div>
+				</div>
+			</article>
+		</f:for>
+	</div>
+
+	<f:link.action action="new">New Blog</f:link.action>
+</f:section>
+</html>

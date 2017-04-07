@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+	<f:render partial="Header" arguments="{settings : settings, data : data, class : '' }" />
+	<f:if condition="{files}">
+		<div class="wrapper-parent">
+			<f:for each="{files}" as="row" iteration="fileIterator">
+				<div class="row">
+					<f:for each="{row}" as="file">
+						<f:if condition="{data.imagecols} == 1">
+							<div class="col-md-12">
+						</f:if>
+						<f:if condition="{data.imagecols} == 2">
+							<div class="col-xs-12 col-sm-6 col-md-6">
+						</f:if>
+						<f:if condition="{data.imagecols} == 3">
+							<div class="col-xs-12 col-sm-4 col-md-4">
+						</f:if>
+						<f:if condition="{data.imagecols} == 4">
+							<div class="col-xs-12 col-sm-3 col-md-3">
+						</f:if>
+						<f:if condition="{data.imagecols} == 6">
+							<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+						</f:if>
+						<f:if condition="{data.imagecols} == 12">
+							<div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+						</f:if>
+						<ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
+							<f:media
+								file="{file}"
+								alt="{file.alternative -> f:format.stripTags()}"
+								title="{file.title -> f:format.stripTags()}"
+								width="{gallery.width}c"
+								height="{gallery.height}c"
+								class="img-responsive center-block{f:if(condition: '{data.imageborder}',then: ' img-thumbnail')}"
+								additionalAttributes="{srcset: '{f:uri.image(src:\'{file.publicUrl}\', width:\'{gallery.retinaWidth}\', height:\'{gallery.retinaHeight}\')} 2x'}"
+							/>
+						</ce:link.clickEnlarge>
+						</div>
+					</f:for>
+				</div>
+			</f:for>
+		</div>
+	</f:if>
+</f:section>
+</html>

@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="title">
+	<f:translate key="tx_simpleblog_domain_model_blog.title" />
+</label><br />
+	<f:form.textfield property="title" /><br />
+<label for="date">
+	<f:translate key="tx_simpleblog_domain_model_blog.date" />
+</label><br />
+	<f:form.textfield property="date" value="{blog.date->f:format.date()}" /><br />
+<label for="teaser">
+	<f:translate key="tx_simpleblog_domain_model_blog.teaser" />
+</label><br />
+	<f:form.textfield property="teaser" /><br />
+<label for="message">
+	<f:translate key="tx_simpleblog_domain_model_blog.message" />
+</label><br />
+	<f:form.textarea property="message" cols="40" rows="15" /><br />
+<label for="image">
+	<f:translate key="tx_simpleblog_domain_model_blog.image" />
+</label><br />
+	<span>File upload is not implemented!</span><br  /><br />
+</html>

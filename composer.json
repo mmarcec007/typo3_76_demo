@@ -1,0 +1,46 @@
+{
+  "name": "mark/typo3-template-intro",
+  "type": "typo3-cms-extension",
+  "description": "My description comes here",
+  "license": ["proprietary"],
+  "keywords": ["TYPO3 CMS", "foo bar"],
+  "support": {
+    "issues": "https://forge.typo3.org/projects/extension-my_ext_key"
+  },
+  "require": {
+    "typo3/cms": "^7.6",
+    "typo3-ter/realurl": "^2.0",
+    "typo3-ter/t3sbootstrap": "^3.1",
+    "typo3-ter/powermail": "^3.3",
+    "typo3-ter/metaseo": "^2.0",
+    "typo3-ter/dce": "^1.3",
+    "typo3-ter/vhs": "^3.0",
+    "typo3-ter/introduction": "^2.3",
+    "typo3-ter/news": "^5.3",
+    "typo3-ter/dd-googlesitemap": "^2.1",
+    "typo3-ter/rx-shariff": "^10.0",
+    "typo3-ter/extension-builder": "^7.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Twofour\\SimpleBlog\\": "web/typo3conf/ext/simple_blog/Classes",
+      "Twofour\\Inventory\\": "web/typo3conf/ext/inventory/Classes"
+    }
+  },
+  "replace": {
+    "my_ext_key": "self.version",
+    "typo3-ter/my-ext-key": "self.version"
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "web"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    }
+  ]
+}
